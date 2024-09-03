@@ -1,10 +1,15 @@
 [workspace]
 resolver = "2"
 members = [
+  "abnf_converter",
   "corpus_processor",
   "crash_processor",
   "seed_filter",
 ]
+
+[[workspace.bin]]
+name = "abnf_converter"
+path = "abnf_converter/src/main.rs"
 
 [[workspace.bin]]
 name = "corpus_processor"
