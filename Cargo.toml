@@ -1,0 +1,22 @@
+[workspace]
+resolver = "2"
+members = [
+  "corpus_processor",
+  "crash_processor",
+  "seed_filter",
+]
+
+[[workspace.bin]]
+name = "corpus_processor"
+path = "corpus_processor/src/main.rs"
+
+[[workspace.bin]]
+name = "crash_processor"
+path = "crash_processor/src/main.rs"
+
+[[workspace.bin]]
+name = "seed_filter"
+path = "seed_filter/src/main.rs"
+
+[workspace.dependencies]
+snarkvm = { path = "/home/ljedrz/git/aleo/snarkVM", features = ["synthesizer", "fuzzing"] }
