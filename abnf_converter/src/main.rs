@@ -369,7 +369,7 @@ fn ruleset_to_json(rules: &[Rule]) -> String {
         ret.push_str(&rule_to_json(rule, &rules, &extra_nodes));
 
         if rule_iter.peek().is_some() {
-            ret.push_str(", \n");
+            ret.push_str(",\n");
         }
     }
     ret.push_str("\n}");

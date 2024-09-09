@@ -164,6 +164,7 @@ impl<N: Network + Ord> FilteredProgram<N> {
 
         // parse the seed
         let program = Program::<N>::from_str(&code).unwrap();
+        let code = program.to_string();
 
         let mappings = program.mappings().values().map(|m| m.into()).collect::<IndexSet<_>>();
         let mappings = mappings.into_iter().collect::<Vec<_>>();
